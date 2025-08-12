@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volleyball</title>
+    <title>Volleyball and Jokes!</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -38,12 +38,60 @@
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/g-mwrg_szkc?si=4JfmWn36z9pL09uh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <div class='tableauPlaceholder' id='viz1754969249870' style='position: relative'><noscript><a href='#'><img alt='Tournament Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WN&#47;WNL&#47;TournamentDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WNL&#47;TournamentDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WN&#47;WNL&#47;TournamentDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1754969249870');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1700px';vizElement.style.height='1027px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <div class='tableauPlaceholder' id='viz1754969249870' style='position: relative'><noscript><a href='#'><img alt='Tournament Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WN&#47;WNL&#47;TournamentDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WNL&#47;TournamentDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WN&#47;WNL&#47;TournamentDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div><script type='text/javascript'>var divElement = document.getElementById('viz1754969249870');var vizElement = divElement.getElementsByTagName('object')[0];vizElement.style.width='1700px';vizElement.style.height='1027px';var scriptElement = document.createElement('script');scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+        
+        <!-- Joke Generator Section -->
+        <div class="joke-container">
+            <h2>Random Joke Generator</h2>
+            <p>Need a laugh after a tough game? Click the button!</p>
+            <button id="jokeButton">Get a Joke</button>
+            <p id="jokeDisplay">Your joke will appear here...</p>
+        </div>
     </div>
 
     <div class="footer">
         <a href="#">Top of Page</a>
     </div>
+
+    <script>
+        // Wait for the document to be fully loaded before running the script
+        document.addEventListener('DOMContentLoaded', () => {
+            const jokeButton = document.getElementById('jokeButton');
+            const jokeDisplay = document.getElementById('jokeDisplay');
+            
+            // Jokes are now stored directly in an array, which avoids file-loading errors.
+            const jokes = [
+                "Why don't scientists trust atoms? Because they make up everything!",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "I told my wife she should embrace her mistakes. She gave me a hug.",
+                "What do you call fake spaghetti? An Impasta!",
+                "Why did the bicycle fall over? Because it was two tired!",
+                "What do you call a lazy kangaroo? Pouch potato.",
+                "I'm reading a book on anti-gravity. It's impossible to put down!",
+                "Why don't eggs tell jokes? They'd crack each other up!",
+                "What do you call a fish with no eyes? Fsh.",
+                "I would tell you a joke about an empty pizza box, but it's too cheesy.",
+                "Why was the math book sad? Because it had too many problems.",
+                "What do you get when you cross a snowman and a vampire? Frostbite.",
+                "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+                "How do you organize a space party? You planet.",
+                "Why did the coffee file a police report? It got mugged.",
+                "What's orange and sounds like a parrot? A carrot.",
+                "I used to be a baker, but I couldn't make enough dough.",
+                "Why can't a bicycle stand up by itself? It's two-tired.",
+                "What do you call a bear with no teeth? A gummy bear.",
+                "Did you hear about the restaurant on the moon? Great food, no atmosphere."
+            ];
+
+            // Add a click event listener to the button
+            jokeButton.addEventListener('click', () => {
+                // Get a random index from the jokes array
+                const randomIndex = Math.floor(Math.random() * jokes.length);
+                // Display the random joke
+                jokeDisplay.textContent = jokes[randomIndex];
+            });
+        });
+    </script>
 
 </body>
 </html>
